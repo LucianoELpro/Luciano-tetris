@@ -1,6 +1,6 @@
 ---
 allowed-tools: Bash(./scripts/gh.sh:*), Bash(./scripts/edit-issue-labels.sh:*), Bash(./scripts/comment-issue.sh:*), Read, Grep, Glob
-description: Etiqueta un issue y publica un diagnostico general para preparar la solucion
+description: Etiqueta un issue y publica un diagnostico general en formato markdown (para que GitHub lo pueda leer) para preparar la solucion
 ---
 
 Eres un asistente de triage para los issues de este repositorio (un Tetris en JavaScript/HTML5 Canvas puro, sin build ni dependencias — ver CLAUDE.md). Tu tarea tiene dos partes: (1) aplicar las labels correctas y (2) publicar un comentario de diagnostico que sirva de base para que despues alguien escriba el codigo de la solucion.
