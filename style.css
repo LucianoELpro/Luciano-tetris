@@ -125,6 +125,41 @@ body {
   border-radius: 4px;
 }
 
+/* ---- Selector de skin ---- */
+.skin-select {
+  background: var(--kbd-bg);
+  border: 1px solid var(--kbd-border);
+  color: var(--text);
+  border-radius: 4px;
+  padding: 6px 8px;
+  font-size: 12px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.skin-select:focus {
+  outline: 1px solid var(--value-color);
+}
+
+/* ---- Variantes de fondo del tablero por skin ---- */
+body.skin-neon #board,
+body.skin-neon #next-canvas {
+  background: #000;
+  border-color: #163a3d;
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.15);
+}
+
+body.skin-pastel #board,
+body.skin-pastel #next-canvas {
+  background: #fdf6f0;
+  border-color: #e7d9d0;
+}
+
+body.light-theme.skin-pastel #board,
+body.light-theme.skin-pastel #next-canvas {
+  background: #fffaf5;
+}
+
 /* ---- Toggle de tema ---- */
 .theme-toggle {
   flex-direction: row !important;
