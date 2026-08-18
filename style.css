@@ -210,8 +210,8 @@ kbd {
   border-radius: 4px;
 }
 
-.overlay.hidden {
-  display: none;
+.hidden {
+  display: none !important;
 }
 
 .overlay-box {
@@ -220,6 +220,10 @@ kbd {
   flex-direction: column;
   gap: 12px;
   align-items: center;
+  max-width: 260px;
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 8px;
 }
 
 #overlay-title {
@@ -235,8 +239,13 @@ kbd {
   color: var(--overlay-score-color);
 }
 
-#restart-btn {
-  margin-top: 8px;
+.overlay-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.primary-btn {
   background: var(--restart-bg);
   color: var(--restart-color);
   border: none;
@@ -249,6 +258,108 @@ kbd {
   transition: background 0.15s;
 }
 
-#restart-btn:hover {
+.primary-btn:hover {
   background: var(--restart-hover);
+}
+
+/* ---- Nombre para nuevo record ---- */
+.name-entry {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.name-entry label {
+  font-size: 12px;
+  color: var(--overlay-score-color);
+}
+
+.name-entry-row {
+  display: flex;
+  gap: 8px;
+}
+
+#name-input {
+  flex: 1;
+  min-width: 0;
+  background: var(--kbd-bg);
+  border: 1px solid var(--kbd-border);
+  border-radius: 4px;
+  color: var(--text);
+  padding: 6px 8px;
+  font-size: 13px;
+}
+
+#save-score-btn {
+  background: var(--restart-bg);
+  color: var(--restart-color);
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* ---- Tabla de records ---- */
+.highscore-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+.highscore-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  color: var(--text);
+  text-align: left;
+}
+
+.highscore-list li {
+  padding: 3px 6px;
+  border-radius: 3px;
+  background: var(--kbd-bg);
+}
+
+.highscore-empty {
+  text-align: center;
+  color: var(--controls-color);
+  background: transparent !important;
+}
+
+.highscore-highlight {
+  background: var(--value-color) !important;
+  color: var(--bg) !important;
+  font-weight: 700;
+}
+
+.best-stats {
+  font-size: 11px;
+  color: var(--controls-color);
+  text-align: center;
+}
+
+.reset-btn {
+  background: transparent;
+  border: 1px solid var(--kbd-border);
+  color: var(--controls-color);
+  border-radius: 4px;
+  padding: 6px 10px;
+  font-size: 11px;
+  cursor: pointer;
+  align-self: center;
+  margin-top: 4px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.reset-btn:hover {
+  border-color: var(--overlay-title-color);
+  color: var(--overlay-title-color);
 }
